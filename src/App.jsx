@@ -10,11 +10,24 @@ import UpperNavbar from './Components/UpperNavbar/UpperNavbar'
 import SideMenu from './Components/SideMenu/SideMenu'
 import SideNavbar from './Components/SideNavabar/SideNavbar'
 
-function App() {
-  const [count, setCount] = useState(0)
+// import { useSelector,useDispatch } from 'react-redux';
+// import { getTodo , addTodo , updateTodo , deleteTodo } from './Features/TodoApi/TodoApiSlice'
 
+function App() {
+//   const todo = useSelector(state=>state?.todos.value)
+//   console.log(todo);
+  
+//   const dispatch = useDispatch()
+//   const getAllTodo = ()=> {
+//     dispatch(getTodo())
+//   }
+// setTimeout(()=>{
+//   getAllTodo()
+  
+// },2000)
   return (
     <>
+    
       <div data-layer="Light mode" className="LightMode w-full h-screen flex bg-white">
  <div className="side w-1/4 h-screen flex shadow-md sm:hidden md:block xs:hidden">
  <SideNavbar/>
