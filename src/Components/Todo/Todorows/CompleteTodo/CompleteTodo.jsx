@@ -1,6 +1,8 @@
 import React from 'react'
 
-const CompleteTodo = () => {
+const CompleteTodo = (completed) => {
+  console.log(completed);
+  
   return (
     <>
       <div data-layer="Done" className="Done w-[352px] h-[826px] relative">

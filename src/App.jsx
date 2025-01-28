@@ -9,6 +9,7 @@ import UpperMenu from './Components/UpperMenu/UpperMenu'
 import UpperNavbar from './Components/UpperNavbar/UpperNavbar'
 import SideMenu from './Components/SideMenu/SideMenu'
 import SideNavbar from './Components/SideNavabar/SideNavbar'
+import Todo from './Components/Todo/Todo'
 
 // import { useSelector,useDispatch } from 'react-redux';
 // import { getTodo , addTodo , updateTodo , deleteTodo } from './Features/TodoApi/TodoApiSlice'
@@ -38,9 +39,10 @@ function App() {
   <div className="inner w-full m-2 flex flex-col h-fit gap-2">
   <UpperMenu/>
    <div className="todorows w-full m-2 flex h-fit gap-2">
-  <AddTodo/>
+  {/* <AddTodo/>
   <ProgressTodo/> 
-   <CompleteTodo/> 
+   <CompleteTodo/>  */}
+   <Todo/>
    </div>
   </div>
 
