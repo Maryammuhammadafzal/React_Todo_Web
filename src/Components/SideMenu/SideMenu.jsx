@@ -3,7 +3,7 @@ import React from 'react'
 const SideMenu = () => {
   return (
     <>
-      <div data-layer="Projects" className="Projects w-[318px] h-[1022px] relative">
+      <div data-layer="Projects" className="Projects w-2xs h- relative ">
   <div data-layer="Mode" className="Mode w-[262px] h-[42px] left-[28px] top-[852px] absolute">
     <div data-layer="Box" className="Box w-[262px] h-[42px] left-0 top-0 absolute bg-[#1c1d22]/5 rounded-[22px]" />
     <div data-layer="Items" className="Items w-[254px] h-[34px] left-[4px] top-[4px] absolute">

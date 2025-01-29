@@ -29,12 +29,12 @@ function App() {
   return (
     <>
     
-      <div data-layer="Light mode" className="LightMode w-full h-screen flex bg-white">
- <div className="side w-1/4 h-screen flex shadow-md sm:hidden md:block xs:hidden">
+      <div data-layer="Light mode" className="LightMode w-full overflow-hidden h-screen flex bg-white">
+ <div className="side w-1/4 h-screen flex shadow-md">
  <SideNavbar/>
  <SideMenu/>
  </div>
- <div className="dashboard w-[100%] h-screen flex flex-col space-y-3 gap-2 justify-center bg-amber-100">
+ <div className="dashboard w-3/4 h-screen flex flex-col space-y-3 gap-2 justify-center bg-amber-100">
   <UpperNavbar/>
   <div className="inner w-full m-2 flex flex-col h-fit gap-2">
   <UpperMenu/>
