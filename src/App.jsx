@@ -10,48 +10,32 @@ import UpperNavbar from './Components/UpperNavbar/UpperNavbar'
 import SideMenu from './Components/SideMenu/SideMenu'
 import SideNavbar from './Components/SideNavabar/SideNavbar'
 import Todo from './Components/Todo/Todo'
+import LoadingScreen from './Pages/LoadingScreen/LoadingScreen'
+import { useSelector,useDispatch } from 'react-redux';
+import { displayLandingPage } from './Features/TodoApi/TodoApiSlice'
+import Navbar from './Components/Navbar/Navbar'
+import TodoList from './Pages/TodoList/TodoList'
 
 // import { useSelector,useDispatch } from 'react-redux';
 // import { getTodo , addTodo , updateTodo , deleteTodo } from './Features/TodoApi/TodoApiSlice'
 
 function App() {
-//   const todo = useSelector(state=>state?.todos.value)
-//   console.log(todo);
-  
-//   const dispatch = useDispatch()
-//   const getAllTodo = ()=> {
-//     dispatch(getTodo())
-//   }
-// setTimeout(()=>{
-//   getAllTodo()
-  
-// },2000)
-  return (
-    <>
-    
-      <div data-layer="Light mode" className="LightMode w-full overflow-hidden h-screen flex bg-white">
- <div className="side w-1/4 h-screen flex shadow-md">
- <SideNavbar/>
- <SideMenu/>
- </div>
- <div className="dashboard w-3/4 h-screen flex flex-col space-y-3 gap-2 justify-center bg-amber-100">
-  <UpperNavbar/>
-  <div className="inner w-full m-2 flex flex-col h-fit gap-2">
-  <UpperMenu/>
-   <div className="todorows w-full m-2 flex h-fit gap-2">
-  {/* <AddTodo/>
-  <ProgressTodo/> 
-   <CompleteTodo/>  */}
-   <Todo/>
-   </div>
-  </div>
+  const display = useSelector(state => state?.todo?.state);
+  console.log(display);
 
- 
+
+return (
+  <>
+    {/* Show Loading Screen Only If State is True */}
+    {display ? <LoadingScreen /> : (
+      <div>
+       <Navbar/>
+       <TodoList/>
+      </div>
+    )}
   
- </div>
- 
-  
-</div>
+
+
     </>
   )
 }

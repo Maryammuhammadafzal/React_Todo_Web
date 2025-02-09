@@ -3,8 +3,11 @@ import React from 'react'
 const SideMenu = () => {
   return (
     <>
-      <div data-layer="Projects" className="Projects w-2xs h- relative ">
-  <div data-layer="Mode" className="Mode w-[262px] h-[42px] left-[28px] top-[852px] absolute">
+      <div data-layer="Projects" className="Projects w-2xs h-screen shadow-md flex justify-center items-center">
+      <div className='w-[93%] h-[95vh] flex flex-col'>
+      <div data-layer="Projects️" className="Projects  text-[#1c1d22] text-3xl font-bold font-['Exo 2'] leading-[30px]">Projects️</div>
+      </div>
+  {/* <div data-layer="Mode" className="Mode w-[262px] h-[42px] left-[28px] top-[852px] absolute">
     <div data-layer="Box" className="Box w-[262px] h-[42px] left-0 top-0 absolute bg-[#1c1d22]/5 rounded-[22px]" />
     <div data-layer="Items" className="Items w-[254px] h-[34px] left-[4px] top-[4px] absolute">
       <div data-layer="Item" className="Item w-[127px] h-[34px] left-[127px] top-0 absolute">
@@ -86,8 +89,8 @@ const SideMenu = () => {
       <div data-layer="Icon" className="Icon opacity-40 w-2 h-2 left-[10px] top-[10px] absolute">
       </div>
     </div>
-    <div data-layer="Projects️" className="Projects left-0 top-0 absolute text-[#1c1d22] text-3xl font-bold font-['Exo 2'] leading-[30px]">Projects️</div>
-  </div>
+    
+  </div> */}
 </div>
     </>
   )

@@ -3,6 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
   todos: [], // Changed from value to todos to store the list
   status: 'idle', // To track API call status
+  state : true,
   error: null, // To handle errors
 };
 
@@ -10,6 +11,11 @@ export const todoSlice = createSlice({
   name: 'todo',
   initialState,
   reducers: {
+    displayLandingPage: (state) => {
+      console.log("Before update:", state.state); 
+      state.state = false; 
+      console.log("After update:", state.state); 
+    },
     addTodo: (state, action) => {
       state.todos.push(action.payload);
     },
@@ -38,10 +44,12 @@ export const todoSlice = createSlice({
     },
   },
 });
-console.log(typeof todoSlice , todoSlice);
+
+
 
 
 export const {
+  displayLandingPage,
   addTodo,
   updateTodo,
   deleteTodo,
