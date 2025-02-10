@@ -15,6 +15,7 @@ import { useSelector,useDispatch } from 'react-redux';
 import { displayLandingPage } from './Features/TodoApi/TodoApiSlice'
 import Navbar from './Components/Navbar/Navbar'
 import TodoList from './Pages/TodoList/TodoList'
+import Home from './Pages/Home/Home'
 
 // import { useSelector,useDispatch } from 'react-redux';
 // import { getTodo , addTodo , updateTodo , deleteTodo } from './Features/TodoApi/TodoApiSlice'
@@ -30,7 +31,7 @@ return (
     {display ? <LoadingScreen /> : (
       <div>
        <Navbar/>
-       <TodoList/>
+       <Home/>
       </div>
     )}
   

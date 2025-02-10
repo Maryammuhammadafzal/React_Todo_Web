@@ -5,7 +5,7 @@ export const fetchTodos = () => async (dispatch) => {
         try {
                 await fetch('https://dummyjson.com/todos')
                         .then(res => res.json())
-                        .then(res => console.log(dispatch(fetchTodosSuccess(res.todos))));
+                        .then(res =>  (dispatch(fetchTodosSuccess(res.todos))));
         } catch (error) {
                 dispatch(fetchTodosFailure(error.message));
         }

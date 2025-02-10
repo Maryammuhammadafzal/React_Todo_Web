@@ -19,7 +19,7 @@ const LoadingScreen = () => {
                 <h2 className='w-full px-3 flex text-2xl font-bold'><span className='text-blue-600'>Todo</span>Web</h2>
            </div>
           <h1 className='capitalize text-6xl font-bold m-4 leading-20'><span className='font-extrabold text-blue-600'>Organize</span> Your Task and ideas easily </h1>
-          <div>  <Button  click={()=>dispatch(displayLandingPage())} /></div>
+          <div>  <Button  click={()=>dispatch(displayLandingPage())} text="Get Started" /></div>
         </div>
       <img src={LoadingImage} className='h-[500px] w-[40%]' alt="loading_screen" />
     </div>

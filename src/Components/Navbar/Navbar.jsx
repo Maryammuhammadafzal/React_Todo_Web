@@ -9,20 +9,34 @@ const MySwal = withReactContent(Swal);
 
 const Navbar = () => {
          const [inputValue, setInputValue] = useState('');
-               const dispatch = useDispatch();
+               
              
 
- const showSwal = () => {
-   withReactContent(Swal).fire({
-     title: <i>Add Todo</i>,
-     input: 'text',
-     inputValue,
-     preConfirm: () => {
-       setInputValue(Swal.getInput()?.value || '')
-     },
-   })
- }
+ const showSwal = async() => {
+  const { value: formValues } = await Swal.fire({
+    title: "Multiple inputs",
+    html: `
+      <input id="swal-input1" type="number" class="swal2-input" placeholder="Enter Your Id (1 to 10)">
+      <input id="swal-input2" class="swal2-input" placeholder="Enter Your Todo">
+    `,
+    focusConfirm: false,
+    preConfirm: () => {
+      return [
+        document.getElementById("swal-input1").value,
+        document.getElementById("swal-input2").value
+      ];
+    }
+  });
+  if (formValues) {
+   let inputValues =  Swal.fire(JSON.stringify(formValues));
+   setInputValue(inputValues)
+   console.log(JSON.parse(inputValues.params.title));
+  }
 
+ }
+ console.log();
+ 
+ 
 
 
   return (
@@ -39,7 +53,7 @@ const Navbar = () => {
     </div>
         <div class="flex items-center  justify-end pr-3 w-[45%]">
         
-           <Button click={showSwal}>Add</Button>
+           <Button click={showSwal} text="Add Todo">Add</Button>
         </div>
 </nav>
 
